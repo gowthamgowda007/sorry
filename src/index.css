@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .font-sacramento {
+    font-family: 'Sacramento', cursive;
+  }
+  .font-dancing {
+    font-family: 'Dancing Script', cursive;
+  }
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  .font-quicksand {
+    font-family: 'Quicksand', sans-serif;
+  }
+}
+
+/* Glassmorphism utility classes */
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 15px 35px -5px rgba(236, 175, 203, 0.25), 0 5px 15px -3px rgba(186, 175, 236, 0.15);
+}
+
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 25px 45px -5px rgba(244, 143, 177, 0.35), 0 10px 20px -3px rgba(179, 157, 219, 0.25);
+  transform: translateY(-4px);
+}
+
+.glass-button {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 192, 203, 0.5);
+  box-shadow: 0 8px 20px -4px rgba(244, 143, 177, 0.3);
+  transition: all 0.25s ease;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 28px -4px rgba(244, 143, 177, 0.5);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf2f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #fbcfe8;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f472b6;
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 12px rgba(244, 114, 182, 0.4));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 24px rgba(244, 114, 182, 0.7));
+    transform: scale(1.06);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Polaroid Paper Texture effect */
+.polaroid-card {
+  background: #ffffff;
+  padding: 14px 14px 24px 14px;
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.08), 0 4px 8px -2px rgba(236, 72, 153, 0.12);
+  border-radius: 4px;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.polaroid-card:hover {
+  transform: translateY(-8px) rotate(0deg) scale(1.03) !important;
+  box-shadow: 0 20px 35px -8px rgba(236, 72, 153, 0.25), 0 8px 16px -4px rgba(0, 0, 0, 0.12);
+  z-index: 20;
+}
