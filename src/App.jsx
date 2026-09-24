@@ -8,7 +8,9 @@ import MemoriesSection from './components/MemoriesSection';
 import PromiseSection from './components/PromiseSection';
 import EndingSection from './components/EndingSection';
 import CustomizeModal from './components/CustomizeModal';
-import { Heart } from 'lucide-react';
+import userMemory1 from './assets/images/user_memory_1.jpg';
+import userMemory2 from './assets/images/user_memory_2.jpg';
+import userMemory3 from './assets/images/user_memory_3.jpg';
 
 const DEFAULT_LETTER = `I know I’ve hurt you, and I’m not going to pretend like it didn’t happen.
 
@@ -32,17 +34,17 @@ const DEFAULT_MEMORIES = [
   {
     id: 1,
     caption: '3D movie date & silly faces 🍿',
-    url: '/assets/user_memory_1.jpg',
+    url: userMemory1,
   },
   {
     id: 2,
     caption: 'Your beautiful smile with me 💕',
-    url: '/assets/user_memory_2.jpg',
+    url: userMemory2,
   },
   {
     id: 3,
     caption: 'Utsav fest together 🎉',
-    url: '/assets/user_memory_3.jpg',
+    url: userMemory3,
   },
 ];
 
