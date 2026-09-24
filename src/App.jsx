@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Heart } from 'lucide-react';
 import BackgroundCanvas from './components/BackgroundCanvas';
 import MusicPlayer from './components/MusicPlayer';
 import Navbar from './components/Navbar';
